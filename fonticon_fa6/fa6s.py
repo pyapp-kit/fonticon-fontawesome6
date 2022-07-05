@@ -6,7 +6,7 @@ FONTS = Path(__file__).parent / "fonts"
 
 
 class FA6S(IconFont):
-    __font_file__ = str(FONTS / "Font Awesome 5 Free-Solid-900.otf")
+    __font_file__ = str(FONTS / "Font Awesome 6 Free-Solid-900.otf")
 
     ad = '\uf641'
     address_book = '\uf2b9'

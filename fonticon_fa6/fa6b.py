@@ -6,7 +6,7 @@ FONTS = Path(__file__).parent / "fonts"
 
 
 class FA6B(IconFont):
-    __font_file__ = str(FONTS / "Font Awesome 5 Brands-Regular-400.otf")
+    __font_file__ = str(FONTS / "Font Awesome 6 Brands-Regular-400.otf")
 
     _500px = '\uf26e'
     accessible_icon = '\uf368'
