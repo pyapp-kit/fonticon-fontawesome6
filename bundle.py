@@ -5,6 +5,7 @@ import urllib.request
 from pathlib import Path
 from zipfile import ZipFile
 import json
+import ast
 
 VERSION = "6.1.1"
 PKG_DIR = Path(__file__).parent / "fonticon_fa6"
@@ -77,7 +78,12 @@ def build(data, version, pkg):
     for charmap, otf, name in data:
         code = TEMPLATE.format(name=name, file=otf.name) + "\n\n"
         for key, glpyh in charmap.items():
-            code += f"    {normkey(key)} = '\\u{glpyh}'\n"
+            line = f"{normkey(key)} = '\\u{glpyh}'"
+            try:
+                ast.parse(line)
+            except SyntaxError:
+                continue
+            code += f"    {line}\n"
 
         dest = Path(pkg) / f"{name.lower()}.py"
         dest.write_text(code)
