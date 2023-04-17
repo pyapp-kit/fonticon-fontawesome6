@@ -4,7 +4,7 @@ T = TypeVar("T", bound="IconFontMeta")
 
 
 class IconFontMeta(type):
-    def __new__(cls: type[T], name: str, bases: tuple, namespace: dict) -> T:
+    def __new__(cls: 'type[T]', name: str, bases: tuple, namespace: dict) -> T:
         assert "__font_file__" in namespace, "Font must have a `__font_file__` attr!"
         # update all values to be `key.unicode`
         namespace.update(
