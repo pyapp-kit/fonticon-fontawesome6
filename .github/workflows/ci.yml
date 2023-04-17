@@ -28,6 +28,9 @@ jobs:
         exclude:
           - backend: pyside2  # this is a superqt issue
             python-version: "3.11"
+        include:
+          - backend: pyside2
+            python-version: "3.10"
 
     steps:
       - name: 🛑 Cancel Previous Runs
