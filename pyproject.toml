@@ -35,15 +35,8 @@ packages = ["src/fonticon_fa6"]
 
 # https://peps.python.org/pep-0621/#dependencies-optional-dependencies
 [project.optional-dependencies]
-test = ["pytest", "pytest-cov"]
-dev = [
-    "black",
-    "ipython",
-    "mypy",
-    "pdbpp",   # https://github.com/pdbpp/pdbpp
-    "rich",    # https://github.com/Textualize/rich
-    "ruff",
-]
+test = ["pytest", "pytest-cov", "superqt"]
+dev = ["black", "ipython", "mypy", "pdbpp", "rich", "ruff"]
 
 [project.urls]
 homepage = "https://github.com/pyapp-kit/fonticon-fontawesome6"
@@ -82,7 +75,7 @@ pretty = true
 [tool.pytest.ini_options]
 minversion = "6.0"
 testpaths = ["tests"]
-filterwarnings = ["error"]
+filterwarnings = ["error:::fonticon_fa6"]
 
 # https://github.com/mgedmin/check-manifest#configuration
 [tool.check-manifest]
