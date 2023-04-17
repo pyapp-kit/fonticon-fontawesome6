@@ -1,15 +1,15 @@
+import ast
 import io
-import shutil
+import json
 import keyword
+import shutil
 import urllib.request
 from pathlib import Path
 from zipfile import ZipFile
-import json
-import ast
 
 VERSION = "6.4.0"
-PKG_DIR = Path(__file__).parent / "fonticon_fa6"
-URL = "https://github.com/FortAwesome/Font-Awesome/releases/download/{0}/fontawesome-free-{0}-desktop.zip"
+PKG_DIR = Path(__file__).parent.parent / "src" / "fonticon_fa6"
+URL = "https://github.com/FortAwesome/Font-Awesome/releases/download/{0}/fontawesome-free-{0}-desktop.zip"  # noqa
 
 
 def get_data(version, pkg_dir):
@@ -93,7 +93,7 @@ def build(data, version, pkg):
         _all.append(name)
 
     init = f"__all__ = {_all!r}\n" + init
-    (Path(pkg) / f"__init__.py").write_text(init)
+    (Path(pkg) / "__init__.py").write_text(init)
     print("writing __init__.py")
 
 
