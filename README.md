@@ -4,7 +4,7 @@
 [![PyPI](https://img.shields.io/pypi/v/fonticon-fontawesome6.svg?color=green)](https://pypi.org/project/fonticon-fontawesome6)
 [![Python Version](https://img.shields.io/pypi/pyversions/fonticon-fontawesome6.svg?color=green)](https://python.org)
 
-FontAwesome 6 extension for superqt font icons
+FontAwesome 6 extension for [superqt font icons](https://pyapp-kit.github.io/superqt/utilities/fonticon/)
 
 ```sh
 pip install superqt fonticon-fontawesome6
