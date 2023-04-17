@@ -6,7 +6,7 @@ FONTS = Path(__file__).parent / "fonts"
 
 
 class FA6R(IconFont):
-    """Font Awesome 6 Free Regular Icons."""
+    """Font Awesome 6 Free-Regular-400."""
 
     __font_file__ = str(FONTS / "Font Awesome 6 Free-Regular-400.otf")
 

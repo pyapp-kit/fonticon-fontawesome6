@@ -3,6 +3,7 @@ import io
 import json
 import keyword
 import shutil
+import subprocess
 import urllib.request
 from pathlib import Path
 from zipfile import ZipFile
@@ -67,6 +68,7 @@ FONTS = Path(__file__).parent / "fonts"
 
 
 class {name}(IconFont):
+    '''{doc}.'''
     __font_file__ = str(FONTS / "{file}")
 """.strip()
 
@@ -76,7 +78,7 @@ def build(data, version, pkg):
     _all = []
 
     for charmap, otf, name in data:
-        code = TEMPLATE.format(name=name, file=otf.name) + "\n\n"
+        code = TEMPLATE.format(name=name, doc=otf.stem, file=otf.name) + "\n\n"
         for key, glpyh in charmap.items():
             line = f"{normkey(key)} = '\\u{glpyh}'"
             try:
@@ -99,6 +101,7 @@ def build(data, version, pkg):
 
 def main(version, root):
     build(get_data(version, root), version, root)
+    subprocess.run(["pre-commit", "run", "--all-files"])
 
 
 if __name__ == "__main__":
