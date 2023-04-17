@@ -126,6 +126,7 @@ class FA6R(IconFont):
     heart = '\uf004'
     hospital = '\uf0f8'
     hourglass = '\uf254'
+    hourglass_half = '\uf252'
     id_badge = '\uf2c1'
     id_card = '\uf2c2'
     image = '\uf03e'

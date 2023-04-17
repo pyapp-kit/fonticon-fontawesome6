@@ -7,7 +7,7 @@ from zipfile import ZipFile
 import json
 import ast
 
-VERSION = "6.1.1"
+VERSION = "6.4.0"
 PKG_DIR = Path(__file__).parent / "fonticon_fa6"
 URL = "https://github.com/FortAwesome/Font-Awesome/releases/download/{0}/fontawesome-free-{0}-desktop.zip"
 
