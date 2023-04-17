@@ -26,3 +26,8 @@ btn2.show()
 
 app.exec_()
 ```
+
+### Dev note
+
+To update this package for new fonticon releases, update the `VERSION = ...` string
+in `scripts/bundle.py`, and rerun `python scripts/bundle.py`.
