@@ -10,7 +10,7 @@ from zipfile import ZipFile
 
 VERSION = "6.4.0"
 PKG_DIR = Path(__file__).parent.parent / "src" / "fonticon_fa6"
-URL = "https://github.com/FortAwesome/Font-Awesome/releases/download/{0}/fontawesome-free-{0}-desktop.zip"  # noqa
+URL = "https://github.com/FortAwesome/Font-Awesome/releases/download/{0}/fontawesome-free-{0}-desktop.zip"
 
 
 def get_data(version, pkg_dir):
