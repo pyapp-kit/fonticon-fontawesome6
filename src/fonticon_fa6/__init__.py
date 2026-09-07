@@ -1,4 +1,4 @@
-__all__ = ["FA6R", "FA6B", "FA6S"]
+__all__ = ["FA6B", "FA6R", "FA6S"]
 __version__ = "6.4.0"
 
 from .fa6b import FA6B

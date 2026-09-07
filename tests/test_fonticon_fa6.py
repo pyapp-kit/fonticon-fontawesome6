@@ -1,6 +1,7 @@
-from fonticon_fa6 import FA6B, FA6R, FA6S
 from qtpy.QtWidgets import QPushButton
 from superqt.fonticon import icon
+
+from fonticon_fa6 import FA6B, FA6R, FA6S
 
 
 def test_FA6S(qtbot):
